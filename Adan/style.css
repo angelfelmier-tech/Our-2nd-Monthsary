@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #fff7f8;
+    color: #76656c;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+/* FLOATING EMOTICONS */
+
+.floating {
+    position: fixed;
+    z-index: 0;
+    color: #d99eae;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+.f1 {
+    top: 12%;
+    left: 7%;
+    font-size: 30px;
+}
+
+.f2 {
+    top: 35%;
+    right: 8%;
+    font-size: 20px;
+    animation-delay: 1s;
+}
+
+.f3 {
+    bottom: 15%;
+    left: 5%;
+    font-size: 19px;
+    animation-delay: 2s;
+}
+
+.f4 {
+    top: 65%;
+    right: 6%;
+    font-size: 27px;
+    animation-delay: 3s;
+}
+
+.f5 {
+    top: 80%;
+    left: 45%;
+    font-size: 22px;
+    animation-delay: 2s;
+}
+
+.f6 {
+    top: 8%;
+    right: 20%;
+    font-size: 19px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ENTRANCE PAGE */
+
+.welcome {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-card {
+    background-color: #fffafb;
+    width: 100%;
+    max-width: 470px;
+    padding: 75px 25px;
+    border: 1px solid #f1dce2;
+    border-radius: 30px;
+    box-shadow: 0 12px 35px rgba(180, 130, 145, 0.10);
+}
+
+.tiny-heart {
+    color: #d89bab;
+    font-size: 27px;
+}
+
+.welcome h1 {
+    color: #b77d91;
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.subtitle {
+    color: #b68e9b;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 330px;
+    margin: 15px auto;
+}
+
+.enter-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 38px;
+    background-color: #e8b8c5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.enter-button:hover {
+    background-color: #ce93a5;
+    transform: scale(1.06);
+}
+
+.face {
+    color: #c995a5;
+    margin-top: 35px;
+    font-size: 17px;
+}
+
+/* LETTER */
+
+.letter-section {
+    position: relative;
+    z-index: 1;
+    padding: 75px 20px;
+}
+
+.letter {
+    max-width: 850px;
+    margin: auto;
+    padding: 75px 90px;
+    background-color: #fffafb;
+    border: 1px solid #f0dfe3;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(180, 130, 145, 0.09);
+    text-align: left;
+}
+
+.back {
+    color: #c18c9c;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back:hover {
+    color: #a7657d;
+}
+
+.letter-heart,
+.last-heart {
+    text-align: center;
+    color: #d89bab;
+    font-size: 25px;
+}
+
+.letter h2 {
+    text-align: center;
+    color: #b77d91;
+    font-size: 39px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 27px;
+}
+
+.greeting {
+    text-align: center;
+    color: #bd899a;
+}
+
+.song-title {
+    text-align: center;
+    color: #c18c9c;
+    font-size: 23px !important;
+    margin-top: 35px;
+}
+
+/* MUSIC PLAYER */
+
+audio {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 45px;
+}
+
+.signature {
+    color: #b77d91;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 21px !important;
+    text-align: right;
+    margin-top: 40px;
+}
+
+.last-heart {
+    margin-top: 45px;
+}
+
+/* SMALL SCREENS */
+
+@media screen and (max-width: 700px) {
+
+    .welcome-card {
+        padding: 60px 20px;
+    }
+
+    .welcome h1 {
+        font-size: 43px;
+    }
+
+    .letter-section {
+        padding: 35px 12px;
+    }
+
+    .letter {
+        padding: 40px 25px;
+        border-radius: 22px;
+    }
+
+    .letter h2 {
+        font-size: 33px;
+    }
+
+    .letter p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .floating {
+        opacity: 0.25;
+    }
+}
